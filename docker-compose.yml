@@ -1,0 +1,9 @@
+services:
+  ohn-api:
+    build: .
+    container_name: ohn-source-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    # Uncomment to prove your pipeline's retry policy actually works:
+    # command: ["--data", "./data", "--host", "0.0.0.0", "--port", "8000", "--chaos", "0.08"]

@@ -1,0 +1,32 @@
+domain,source_system,source_code,standard_code,standard_description,is_active
+SEX,EHR,M,M,Male,true
+SEX,EHR,F,F,Female,true
+SEX,EHR,1,M,Male,true
+SEX,EHR,2,F,Female,true
+SEX,EHR,U,X,Other or undifferentiated,true
+SEX,SCHED,MALE,M,Male,true
+SEX,SCHED,FEMALE,F,Female,true
+SEX,SCHED,OTHER,X,Other or undifferentiated,true
+SEX,FIN,m,M,Male,true
+SEX,FIN,f,F,Female,true
+SEX,FIN,x,X,Other or undifferentiated,true
+ADMIT_TYPE,EHR,E,EMERGENCY,Emergency,true
+ADMIT_TYPE,EHR,U,URGENT,Urgent,true
+ADMIT_TYPE,EHR,EL,ELECTIVE,Elective,true
+ADMIT_TYPE,EHR,N,NEWBORN,Newborn,true
+ADMIT_TYPE,EHR,T,TRANSFER,Transfer,true
+CLAIM_STATUS,CLAIMS,A1,APPROVED,Approved in full,true
+CLAIM_STATUS,CLAIMS,A2,PARTIAL,Partially approved,true
+CLAIM_STATUS,CLAIMS,D1,DENIED,Denied,true
+CLAIM_STATUS,CLAIMS,P1,PENDING,Pending adjudication,true
+CLAIM_STATUS,CLAIMS,S1,SUBMITTED,Submitted,true
+CLAIM_STATUS,CLAIMS,PD,PAID,Paid,true
+CLAIM_STATUS,CLAIMS,AP,APPEALED,Under appeal,true
+CLAIM_STATUS,CLAIMS,V1,VOID,Voided,true
+DISPOSITION,EHR,HOME,HOME,Discharged home,true
+DISPOSITION,EHR,HMCR,HOME_CARE,Home with services,true
+DISPOSITION,EHR,TRAN,TRANSFER,Transferred to another facility,true
+DISPOSITION,EHR,LTC,LTC,Long-term care,true
+DISPOSITION,EHR,AMA,AMA,Left against medical advice,true
+DISPOSITION,EHR,EXP,EXPIRED,Died in hospital,true
+DISPOSITION,EHR,REHB,REHAB,Transferred to rehab,true

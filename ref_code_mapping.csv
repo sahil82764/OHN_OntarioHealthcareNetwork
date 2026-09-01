@@ -1,0 +1,62 @@
+domain,source_system,source_code,standard_code,standard_description,is_active
+SEX,EHR,1,M,Male,true
+SEX,EHR,2,F,Female,true
+SEX,EHR,3,X,Another gender identity,true
+SEX,SCHED,MALE,M,Male,true
+SEX,SCHED,FEMALE,F,Female,true
+SEX,SCHED,OTHER,X,Another gender identity,true
+SEX,FIN,M,M,Male,true
+SEX,FIN,F,F,Female,true
+SEX,FIN,X,X,Another gender identity,true
+ADMIT_TYPE,EHR,E,EMERGENCY,Emergency,true
+ADMIT_TYPE,EHR,U,URGENT,Urgent,true
+ADMIT_TYPE,EHR,L,ELECTIVE,Elective,true
+ADMIT_TYPE,EHR,N,NEWBORN,Newborn,true
+DISPOSITION,EHR,HOME,HOME,Discharged home,true
+DISPOSITION,EHR,HOME_SUPPORT,HOME_SUPPORT,Discharged home with support services,true
+DISPOSITION,EHR,TRANSFER_ACUTE,TRANSFER_ACUTE,Transferred to another acute facility,true
+DISPOSITION,EHR,LTC,LTC,Transferred to long-term care,true
+DISPOSITION,EHR,REHAB,REHAB,Transferred to rehabilitation,true
+DISPOSITION,EHR,AMA,AMA,Left against medical advice,true
+DISPOSITION,EHR,EXPIRED,EXPIRED,Died in hospital,true
+APPT_STATUS,SCHED,COMPLETED,COMPLETED,Attended and completed,true
+APPT_STATUS,SCHED,NO_SHOW,NO_SHOW,Patient did not attend,true
+APPT_STATUS,SCHED,CANCELLED_PATIENT,CANCELLED_PATIENT,Cancelled by patient,true
+APPT_STATUS,SCHED,CANCELLED_PROVIDER,CANCELLED_PROVIDER,Cancelled by provider,true
+APPT_STATUS,SCHED,CANCELLED_FACILITY,CANCELLED_FACILITY,Cancelled by facility,true
+CLAIM_STATUS,CLAIMS,A1,APPROVED,Approved in full,true
+CLAIM_STATUS,CLAIMS,A2,PARTIAL,Approved in part,true
+CLAIM_STATUS,CLAIMS,D1,DENIED,Denied,true
+CLAIM_STATUS,CLAIMS,P0,PENDING,Pending adjudication,true
+ARRIVAL_MODE,EHR,Walk-in,WALK_IN,Self presented,true
+ARRIVAL_MODE,EHR,Ambulance,AMBULANCE,Arrived by ambulance,true
+ARRIVAL_MODE,EHR,Transfer,TRANSFER,Transferred from another facility,true
+LAB_PRIORITY,LIS,STAT,STAT,Immediate,true
+LAB_PRIORITY,LIS,Routine,ROUTINE,Routine,true
+ABNORMAL_FLAG,LIS,N,NORMAL,Within reference range,true
+ABNORMAL_FLAG,LIS,H,HIGH,Above reference range,true
+ABNORMAL_FLAG,LIS,L,LOW,Below reference range,true
+ABNORMAL_FLAG,LIS,HH,CRITICAL_HIGH,Critically high,true
+ABNORMAL_FLAG,LIS,LL,CRITICAL_LOW,Critically low,true
+MED_FREQUENCY,PHARM,OD,OD,Once daily,true
+MED_FREQUENCY,PHARM,BID,BID,Twice daily,true
+MED_FREQUENCY,PHARM,TID,TID,Three times daily,true
+MED_FREQUENCY,PHARM,QID,QID,Four times daily,true
+MED_FREQUENCY,PHARM,Q4H,Q4H,Every four hours,true
+MED_FREQUENCY,PHARM,PRN,PRN,As needed,true
+PAYER_TYPE,CLAIMS,OHIP,PUBLIC,Public insurer,true
+PAYER_TYPE,CLAIMS,WSIB,PUBLIC,Public insurer,true
+PAYER_TYPE,CLAIMS,IFHP,PUBLIC,Public insurer,true
+PAYER_TYPE,CLAIMS,SUNLIFE,PRIVATE,Private insurer,true
+PAYER_TYPE,CLAIMS,MANULIFE,PRIVATE,Private insurer,true
+PAYER_TYPE,CLAIMS,GREENSHIELD,PRIVATE,Private insurer,true
+PAYER_TYPE,CLAIMS,CANLIFE,PRIVATE,Private insurer,true
+PAYER_TYPE,CLAIMS,SELFPAY,SELF_PAY,Self pay,true
+DENIAL_REASON,CLAIMS,CO16,MISSING_INFO,Claim lacks required information,true
+DENIAL_REASON,CLAIMS,CO18,DUPLICATE,Duplicate claim or service,true
+DENIAL_REASON,CLAIMS,CO29,LATE_FILING,Filed after the time limit,true
+DENIAL_REASON,CLAIMS,CO50,NOT_MEDICALLY_NECESSARY,Not deemed medically necessary,true
+DENIAL_REASON,CLAIMS,CO97,BUNDLED,Included in another adjudicated service,true
+DENIAL_REASON,CLAIMS,PR1,DEDUCTIBLE,Patient deductible,true
+DENIAL_REASON,CLAIMS,PR2,COINSURANCE,Patient coinsurance,true
+DENIAL_REASON,CLAIMS,PR204,NOT_COVERED,Service not covered by the plan,true

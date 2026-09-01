@@ -1,0 +1,26 @@
+loinc_code,test_name,panel_name,specimen_type,result_unit,reference_low,reference_high,is_stat_capable
+2345-7,"Glucose, serum",Chemistry,Serum,mmol/L,3.9,5.6,1
+2160-0,"Creatinine, serum",Chemistry,Serum,umol/L,50.0,110.0,1
+3094-0,"Urea nitrogen, serum",Chemistry,Serum,mmol/L,2.5,8.0,1
+2951-2,"Sodium, serum",Chemistry,Serum,mmol/L,135.0,145.0,1
+2823-3,"Potassium, serum",Chemistry,Serum,mmol/L,3.5,5.1,1
+2075-0,"Chloride, serum",Chemistry,Serum,mmol/L,98.0,107.0,1
+718-7,Haemoglobin,Haematology,Whole blood,g/L,120.0,160.0,1
+4544-3,Haematocrit,Haematology,Whole blood,%,36.0,46.0,1
+6690-2,Leukocytes,Haematology,Whole blood,10*9/L,4.0,11.0,1
+777-3,Platelets,Haematology,Whole blood,10*9/L,150.0,400.0,1
+1975-2,"Bilirubin, total",Chemistry,Serum,umol/L,3.0,20.0,0
+1742-6,Alanine aminotransferase,Chemistry,Serum,U/L,7.0,56.0,0
+1920-8,Aspartate aminotransferase,Chemistry,Serum,U/L,10.0,40.0,0
+2093-3,"Cholesterol, total",Chemistry,Serum,mmol/L,0.0,5.2,0
+2085-9,HDL cholesterol,Chemistry,Serum,mmol/L,1.0,2.5,0
+4548-4,Haemoglobin A1c,Chemistry,Whole blood,%,4.0,6.0,0
+3016-3,Thyrotropin (TSH),Chemistry,Serum,mIU/L,0.4,4.0,0
+10839-9,"Troponin I, cardiac",Chemistry,Serum,ng/L,0.0,14.0,1
+30934-4,Natriuretic peptide B,Chemistry,Plasma,ng/L,0.0,100.0,1
+5902-2,Prothrombin time,Coagulation,Plasma,s,11.0,13.5,1
+6301-6,INR,Coagulation,Plasma,ratio,0.8,1.2,1
+1988-5,C-reactive protein,Chemistry,Serum,mg/L,0.0,5.0,1
+600-7,Blood culture,Microbiology,Whole blood,,,,1
+630-4,Urine culture,Microbiology,Urine,,,,0
+5811-5,Urine specific gravity,Urinalysis,Urine,ratio,1.005,1.03,0

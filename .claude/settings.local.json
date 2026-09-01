@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "PowerShell(Copy-Item \".env\" \"01-sqlserver\\\\.env\")",
+      "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\Docker\\\\Docker\\\\resources\\\\bin\\\\docker.exe\", \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\"\\); foreach \\($p in $paths\\) { Write-Host \"$p : $\\(Test-Path $p\\)\" }; Get-Service -Name \"com.docker.service\" -ErrorAction SilentlyContinue)",
+      "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\Docker\\\\Docker\\\\resources\\\\bin\\\\docker.exe\", \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\"\\); foreach \\($p in $paths\\) { Write-Host \"$p : $\\(Test-Path $p\\)\" })",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\DockerDesktop\" -Filter \"Docker Desktop.exe\" -ErrorAction SilentlyContinue | Select-Object FullName)",
+      "Bash(\"/c/Users/sahil/AppData/Local/Programs/DockerDesktop/Docker Desktop.exe\")",
+      "Bash(disown)",
+      "Bash(/c/Users/sahil/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe info *)",
+      "Bash(/c/Users/sahil/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe inspect *)"
+    ]
+  }
+}

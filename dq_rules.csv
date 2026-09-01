@@ -1,0 +1,37 @@
+rule_id,rule_name,dq_dimension,layer,target_table,target_column,rule_expression,severity,pass_threshold_pct,failure_action,is_active
+DQ-PAT-001,Patient birth date present,Completeness,silver,lh_silver.patient_golden,birth_date,birth_date IS NOT NULL,Error,99.0,Quarantine,true
+DQ-PAT-002,Patient birth date plausible,Validity,silver,lh_silver.patient_golden,birth_date,birth_date BETWEEN DATE'1900-01-01' AND current_date(),Error,99.9,Quarantine,true
+DQ-PAT-003,Patient sex standardised,Validity,silver,lh_silver.patient_golden,sex,sex IN ('M','F','X','UNKNOWN'),Error,100.0,FailBatch,true
+DQ-PAT-004,Golden id unique per patient,Uniqueness,gold,lh_gold.dim_patient,patient_golden_id,true,Error,100.0,FailBatch,true
+DQ-PAT-005,FSA format valid,Validity,silver,lh_silver.patient_golden,fsa,fsa IS NULL OR fsa RLIKE '^[A-Z][0-9][A-Z]$',Warning,98.0,Flag,true
+DQ-PAT-006,Match confidence above review floor,Accuracy,silver,lh_silver.patient_golden,match_confidence,match_confidence >= 8.0,Warning,99.0,Flag,true
+DQ-ADM-001,Admission timestamp present,Completeness,silver,lh_silver.admission,admission_ts,admission_ts IS NOT NULL,Error,100.0,FailBatch,true
+DQ-ADM-002,Admission has a patient reference,Referential,silver,lh_silver.admission,source_patient_id,source_patient_id IS NOT NULL,Error,100.0,Quarantine,true
+DQ-ADM-003,Discharge not before admission,Validity,silver,lh_silver.admission,discharge_ts,discharge_ts IS NULL OR discharge_ts >= admission_ts,Error,99.9,Quarantine,true
+DQ-ADM-004,Length of stay within plausible range,Accuracy,gold,lh_gold.fact_admission,length_of_stay_days,length_of_stay_days IS NULL OR length_of_stay_days BETWEEN 1 AND 365,Warning,99.0,Flag,true
+DQ-ADM-005,Patient key resolves to a real member,Referential,gold,lh_gold.fact_admission,patient_key,patient_key > 0,Error,99.5,Flag,true
+DQ-ADM-006,Open admissions not older than 365 days,Timeliness,gold,lh_gold.fact_admission,is_open,is_open = false OR admission_date_key >= cast(date_format(date_sub(current_date(),365),'yyyyMMdd') as int),Warning,99.0,Flag,true
+DQ-ED-001,CTAS level in range,Validity,silver,lh_silver.emergency_visit,ctas_level,ctas_level IS NULL OR ctas_level BETWEEN 1 AND 5,Error,99.5,Quarantine,true
+DQ-ED-002,ED milestone sequence monotonic,Consistency,silver,lh_silver.emergency_visit,triage_ts,"(triage_ts IS NULL OR triage_ts >= arrival_ts) AND (physician_seen_ts IS NULL OR triage_ts IS NULL OR physician_seen_ts >= triage_ts) AND (departure_ts IS NULL OR departure_ts >= arrival_ts)",Error,99.0,Quarantine,true
+DQ-ED-003,ED length of stay under 72 hours,Accuracy,gold,lh_gold.fact_emergency_visit,total_ed_los_min,total_ed_los_min IS NULL OR total_ed_los_min <= 4320,Warning,99.0,Flag,true
+DQ-ED-004,LWBS visits have no physician timestamp,Consistency,gold,lh_gold.fact_emergency_visit,left_without_being_seen,left_without_being_seen = false OR physician_initial_assessment_min IS NULL,Error,100.0,Flag,true
+DQ-BED-001,Occupancy hours sum to 24,Consistency,gold,lh_gold.fact_bed_occupancy_daily,occupied_hours,round(occupied_hours + available_hours + blocked_hours ) = 24,Error,99.5,Flag,true
+DQ-BED-002,Occupied hours non negative,Validity,gold,lh_gold.fact_bed_occupancy_daily,occupied_hours,occupied_hours >= 0,Error,100.0,FailBatch,true
+DQ-APT-001,Appointment status recognised,Validity,silver,lh_silver.appointment,status_code,status_code IS NOT NULL,Error,100.0,Quarantine,true
+DQ-APT-002,Scheduled date on or after booking date,Consistency,silver,lh_silver.appointment,scheduled_ts,scheduled_ts >= booking_ts,Warning,98.0,Flag,true
+DQ-APT-003,Completed appointment has a duration,Completeness,gold,lh_gold.fact_appointment,actual_duration_min,is_completed = false OR actual_duration_min IS NOT NULL,Warning,95.0,Flag,true
+DQ-LAB-001,Lab test maps to a LOINC code,Referential,silver,lh_silver.lab_result,loinc_code,loinc_code IS NOT NULL,Error,98.0,Quarantine,true
+DQ-LAB-002,Numeric result present when unit given,Completeness,silver,lh_silver.lab_result,result_value_numeric,result_unit IS NULL OR result_value_numeric IS NOT NULL OR result_value_text IS NOT NULL,Warning,97.0,Flag,true
+DQ-LAB-003,Turnaround time non negative,Validity,gold,lh_gold.fact_lab_result,total_turnaround_min,total_turnaround_min IS NULL OR total_turnaround_min >= 0,Error,99.9,Quarantine,true
+DQ-MED-001,Medication maps to a DIN,Referential,silver,lh_silver.medication_order,din,din IS NOT NULL,Error,98.0,Quarantine,true
+DQ-MED-002,Dispensed quantity not above ordered,Consistency,gold,lh_gold.fact_medication_order,quantity_dispensed,quantity_dispensed IS NULL OR quantity_ordered IS NULL OR quantity_dispensed <= quantity_ordered,Warning,99.0,Flag,true
+DQ-MED-003,High alert medications flagged,Completeness,gold,lh_gold.fact_medication_order,is_high_alert,is_high_alert IS NOT NULL,Error,100.0,FailBatch,true
+DQ-CLM-001,Billed amount non negative,Validity,silver,lh_silver.claim_header,billed_amount,billed_amount >= 0,Error,100.0,Quarantine,true
+DQ-CLM-002,Approved amount not above billed,Consistency,gold,lh_gold.fact_claim,approved_amount,approved_amount IS NULL OR approved_amount <= billed_amount,Error,99.5,Flag,true
+DQ-CLM-003,Adjudicated claims have a status,Completeness,gold,lh_gold.fact_claim,claim_status_key,is_adjudicated = false OR claim_status_key > 0,Error,100.0,FailBatch,true
+DQ-CLM-004,Days to adjudicate within 180,Accuracy,gold,lh_gold.fact_claim,days_to_adjudicate,days_to_adjudicate IS NULL OR days_to_adjudicate BETWEEN 0 AND 180,Warning,97.0,Flag,true
+DQ-BIL-001,Net amount reconciles to line components,Consistency,gold,lh_gold.fact_billing_line,net_amount,"abs(net_amount - (charge_amount - discount_amount + tax_amount)) < 0.01",Error,99.9,Flag,true
+DQ-SUR-001,Survey scores in range,Validity,gold,lh_gold.fact_satisfaction_survey,overall_score,overall_score IS NULL OR overall_score BETWEEN 1 AND 10,Error,99.5,Quarantine,true
+DQ-SUR-002,Survey linked to a service date,Completeness,gold,lh_gold.fact_satisfaction_survey,service_date_key,service_date_key > 0,Warning,95.0,Flag,true
+DQ-SRC-001,Source file arrived within SLA,Timeliness,bronze,lh_bronze.ctl_batch_log,log_ts,"log_ts >= date_sub(current_timestamp(), 1)",Warning,95.0,Flag,true
+DQ-SRC-002,No unmapped reference codes,Validity,silver,lh_silver.ref_code_mapping,standard_code,standard_code <> 'UNKNOWN',Warning,99.0,Flag,true

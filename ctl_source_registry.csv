@@ -1,0 +1,17 @@
+source_system,entity_name,description,file_format,delimiter,has_header,business_key,watermark_column,load_type,sla_minutes,is_active
+EHR,patient,Patient demographic master from the hospital EHR,csv,",",true,patient_id,last_modified_ts,incremental,60,true
+EHR,admission,Inpatient admission and discharge events,csv,",",true,admission_id,last_modified_ts,incremental,60,true
+EHR,emergency_visit,Emergency department visits with milestone timestamps,csv,",",true,ed_visit_id,arrival_datetime,incremental,30,true
+EHR,bed_assignment,Bed occupancy intervals per admission,csv,",",true,assignment_id,assignment_start_ts,incremental,60,true
+SCHED,patient,Patient records held by the scheduling system,csv,",",true,patient_ref,modified_at,incremental,120,true
+SCHED,appointment,Outpatient appointments and status history,csv,",",true,appointment_id,scheduled_at,incremental,15,true
+LIS,lab_result,Resulted laboratory tests from the lab middleware,csv,"|",true,result_id,result_dttm,incremental,30,true
+PHARM,medication_order,Medication orders and dispensing activity,json,",",false,orderId,orderedAt,incremental,60,true
+CLAIMS,claim,Insurance claims with adjudication and remittance,csv,"|",true,claim_number,submission_date,incremental,1440,true
+FIN,patient_account,Patient account records from the billing system,csv,",",true,account_holder_id,update_dt,incremental,1440,true
+FIN,invoice_line,Invoice line detail,csv,",",true,"invoice_id,line_no",invoice_dt,incremental,1440,true
+SURVEY,survey_response,Patient satisfaction survey responses,json,",",false,responseId,responseDate,incremental,1440,true
+HR,doctor,Physician and clinical staff roster,csv,",",true,employee_id,,snapshot,1440,true
+FACIL,hospital,Hospital facility master,csv,",",true,hospital_id,,snapshot,1440,true
+FACIL,department,Department master,csv,",",true,department_id,,snapshot,1440,true
+FACIL,bed,"Bed, room and ward master",csv,",",true,bed_id,,snapshot,1440,true

@@ -1,0 +1,9 @@
+payer_id,payer_name,payer_type,plan_tier
+PAY001,Ontario Health Insurance Plan,Public,Standard
+PAY002,Sun Life Financial,Private,Gold
+PAY003,Manulife,Private,Gold
+PAY004,Green Shield Canada,Private,Silver
+PAY005,Canada Life,Private,Silver
+PAY006,Blue Cross,Private,Bronze
+PAY007,WSIB Ontario,WSIB,Standard
+PAY008,Self Pay,Self-pay,None

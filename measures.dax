@@ -1,0 +1,356 @@
+// =====================================================================
+// OHN Analytics — semantic model measures
+// Model: Direct Lake over lh_gold
+// Convention: all measures live in a hidden _Measures table, grouped by
+// display folder. Base measures are prefixed with the subject area.
+// =====================================================================
+
+// ---------------------------------------------------------------- VOLUME
+Total Admissions =
+COUNTROWS ( fact_admission )
+
+Total Discharges =
+CALCULATE (
+    COUNTROWS ( fact_admission ),
+    USERELATIONSHIP ( fact_admission[discharge_date_key], dim_date[date_key] ),
+    fact_admission[is_open] = FALSE
+)
+
+Open Admissions =
+CALCULATE ( COUNTROWS ( fact_admission ), fact_admission[is_open] = TRUE )
+
+Current Inpatient Census =
+// Point-in-time count: admitted on or before the last date in context and
+// not yet discharged. Uses the date table rather than TODAY() so the measure
+// works in historical trend visuals as well as on a live dashboard.
+VAR AsOf = MAX ( dim_date[calendar_date] )
+RETURN
+    CALCULATE (
+        COUNTROWS ( fact_admission ),
+        REMOVEFILTERS ( dim_date ),
+        fact_admission[admission_date_key] <= FORMAT ( AsOf, "YYYYMMDD" ),
+        OR (
+            fact_admission[is_open] = TRUE,
+            fact_admission[discharge_date_key] > FORMAT ( AsOf, "YYYYMMDD" )
+        )
+    )
+
+// ------------------------------------------------------- LENGTH OF STAY
+Average Length of Stay =
+AVERAGEX (
+    FILTER ( fact_admission, NOT ISBLANK ( fact_admission[length_of_stay_days] ) ),
+    fact_admission[length_of_stay_days]
+)
+
+Median Length of Stay =
+MEDIANX (
+    FILTER ( fact_admission, NOT ISBLANK ( fact_admission[length_of_stay_days] ) ),
+    fact_admission[length_of_stay_days]
+)
+
+ALOS Excluding Outliers =
+// Trims stays beyond the 99th percentile. Long-stay ALC patients otherwise
+// dominate the mean and mask week-to-week movement in the typical stay.
+VAR Cutoff =
+    PERCENTILEX.INC (
+        ALL ( fact_admission ),
+        fact_admission[length_of_stay_days],
+        0.99
+    )
+RETURN
+    AVERAGEX (
+        FILTER (
+            fact_admission,
+            NOT ISBLANK ( fact_admission[length_of_stay_days] )
+                && fact_admission[length_of_stay_days] <= Cutoff
+        ),
+        fact_admission[length_of_stay_days]
+    )
+
+Total Patient Days =
+SUM ( fact_admission[length_of_stay_days] )
+
+ICU Days = SUM ( fact_admission[icu_days] )
+
+// -------------------------------------------------------- READMISSIONS
+Readmissions 30d =
+CALCULATE ( COUNTROWS ( fact_admission ), fact_admission[is_readmission_30d] = TRUE )
+
+Index Admissions =
+CALCULATE ( COUNTROWS ( fact_admission ), fact_admission[is_index_admission] = TRUE )
+
+Readmission Rate =
+// Denominator is index admissions, not all admissions: a readmission is not
+// itself eligible to be the index event it is measured against.
+DIVIDE ( [Readmissions 30d], [Index Admissions] )
+
+Readmission Rate PY =
+CALCULATE ( [Readmission Rate], SAMEPERIODLASTYEAR ( dim_date[calendar_date] ) )
+
+Readmission Rate vs PY =
+[Readmission Rate] - [Readmission Rate PY]
+
+// ------------------------------------------------------ EMERGENCY DEPT
+ED Visits = COUNTROWS ( fact_emergency_visit )
+
+Median Triage Wait (min) =
+MEDIANX (
+    FILTER ( fact_emergency_visit, NOT ISBLANK ( fact_emergency_visit[triage_wait_min] ) ),
+    fact_emergency_visit[triage_wait_min]
+)
+
+Median PIA Wait (min) =
+// Physician initial assessment — the metric reported to the ministry.
+MEDIANX (
+    FILTER (
+        fact_emergency_visit,
+        NOT ISBLANK ( fact_emergency_visit[physician_initial_assessment_min] )
+    ),
+    fact_emergency_visit[physician_initial_assessment_min]
+)
+
+P90 ED Length of Stay (min) =
+// The 90th percentile is the reported ED benchmark, not the mean; the
+// distribution is heavily right-skewed and the mean understates the tail.
+PERCENTILEX.INC (
+    FILTER ( fact_emergency_visit, NOT ISBLANK ( fact_emergency_visit[total_ed_los_min] ) ),
+    fact_emergency_visit[total_ed_los_min],
+    0.90
+)
+
+ED Target Met % =
+// CTAS-tiered targets: CTAS 1-2 within 8 hours, CTAS 3-5 within 4 hours.
+VAR MetTarget =
+    COUNTROWS (
+        FILTER (
+            fact_emergency_visit,
+            VAR Threshold =
+                IF ( fact_emergency_visit[ctas_level] <= 2, 480, 240 )
+            RETURN
+                fact_emergency_visit[total_ed_los_min] <= Threshold
+        )
+    )
+RETURN
+    DIVIDE ( MetTarget, [ED Visits] )
+
+LWBS Rate =
+DIVIDE (
+    CALCULATE ( [ED Visits], fact_emergency_visit[left_without_being_seen] = TRUE ),
+    [ED Visits]
+)
+
+ED Admission Conversion Rate =
+DIVIDE (
+    CALCULATE ( [ED Visits], fact_emergency_visit[resulted_in_admission] = TRUE ),
+    [ED Visits]
+)
+
+// ------------------------------------------------------ BED OCCUPANCY
+Occupied Bed Hours = SUM ( fact_bed_occupancy_daily[occupied_hours] )
+Available Bed Hours = SUM ( fact_bed_occupancy_daily[available_hours] )
+Blocked Bed Hours = SUM ( fact_bed_occupancy_daily[blocked_hours] )
+
+Occupancy Rate =
+// Blocked beds are excluded from the denominator: a bed closed for infection
+// control is not capacity that went unused, it is capacity that did not exist.
+DIVIDE ( [Occupied Bed Hours], [Occupied Bed Hours] + [Available Bed Hours] )
+
+Midnight Census =
+CALCULATE (
+    COUNTROWS ( fact_bed_occupancy_daily ),
+    fact_bed_occupancy_daily[is_occupied_at_midnight] = TRUE
+)
+
+Staffed Beds =
+CALCULATE ( DISTINCTCOUNT ( fact_bed_occupancy_daily[bed_key] ) )
+
+Bed Turnover = SUM ( fact_bed_occupancy_daily[turnover_count] )
+
+Occupancy Rate Status =
+VAR R = [Occupancy Rate]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( R ), BLANK (),
+        R >= 0.95, "Critical",
+        R >= 0.85, "High",
+        R >= 0.65, "Target",
+        "Low"
+    )
+
+// -------------------------------------------------------- APPOINTMENTS
+Scheduled Appointments = COUNTROWS ( fact_appointment )
+
+Completed Appointments =
+CALCULATE ( [Scheduled Appointments], fact_appointment[is_completed] = TRUE )
+
+No Shows =
+CALCULATE ( [Scheduled Appointments], fact_appointment[is_no_show] = TRUE )
+
+Cancellations =
+CALCULATE ( [Scheduled Appointments], fact_appointment[is_cancelled] = TRUE )
+
+No Show Rate =
+// Cancellations are excluded from the denominator: a patient who cancelled in
+// advance did not fail to attend, and freeing the slot is a different
+// operational problem from an unfilled one.
+DIVIDE ( [No Shows], [Completed Appointments] + [No Shows] )
+
+Cancellation Rate =
+DIVIDE ( [Cancellations], [Scheduled Appointments] )
+
+Late Cancellation Rate =
+// Within 24 hours, when the slot can no longer realistically be refilled.
+DIVIDE (
+    CALCULATE ( [Cancellations], fact_appointment[cancellation_notice_hours] < 24 ),
+    [Scheduled Appointments]
+)
+
+Average Lead Time (days) = AVERAGE ( fact_appointment[lead_time_days] )
+
+Average Clinic Wait (min) = AVERAGE ( fact_appointment[wait_in_clinic_min] )
+
+// ------------------------------------------------- DOCTOR & DEPARTMENT
+Distinct Patients Seen = DISTINCTCOUNT ( fact_appointment[patient_key] )
+
+Doctor Utilisation =
+// Booked minutes against available clinic minutes derived from FTE.
+VAR BookedMinutes = SUM ( fact_appointment[scheduled_duration_min] )
+VAR WorkingDays =
+    CALCULATE ( COUNTROWS ( dim_date ), dim_date[is_weekend] = FALSE, dim_date[is_holiday] = FALSE )
+VAR AvailableMinutes =
+    SUMX ( VALUES ( dim_doctor[doctor_key] ), CALCULATE ( MAX ( dim_doctor[fte] ) ) * WorkingDays * 450 )
+RETURN
+    DIVIDE ( BookedMinutes, AvailableMinutes )
+
+Admissions per Physician =
+DIVIDE ( [Total Admissions], DISTINCTCOUNT ( fact_admission[attending_doctor_key] ) )
+
+Department Case Mix Index =
+// Placeholder weighting until CMG+ RIW values are licensed; currently the
+// ratio of departmental ALOS to network ALOS.
+DIVIDE (
+    [Average Length of Stay],
+    CALCULATE ( [Average Length of Stay], REMOVEFILTERS ( dim_department ) )
+)
+
+// ------------------------------------------------------- LAB & PHARMACY
+Lab Tests Performed = COUNTROWS ( fact_lab_result )
+
+Abnormal Result Rate =
+DIVIDE (
+    CALCULATE ( [Lab Tests Performed], fact_lab_result[is_abnormal] = TRUE ),
+    [Lab Tests Performed]
+)
+
+Critical Result Count =
+CALCULATE ( [Lab Tests Performed], fact_lab_result[is_critical] = TRUE )
+
+Median Lab Turnaround (min) =
+MEDIANX (
+    FILTER ( fact_lab_result, NOT ISBLANK ( fact_lab_result[total_turnaround_min] ) ),
+    fact_lab_result[total_turnaround_min]
+)
+
+STAT Turnaround Compliance =
+// STAT tests are expected back within 60 minutes.
+DIVIDE (
+    CALCULATE (
+        [Lab Tests Performed],
+        fact_lab_result[priority] = "STAT",
+        fact_lab_result[total_turnaround_min] <= 60
+    ),
+    CALCULATE ( [Lab Tests Performed], fact_lab_result[priority] = "STAT" )
+)
+
+Medication Orders = COUNTROWS ( fact_medication_order )
+Medication Cost = SUM ( fact_medication_order[total_cost] )
+
+High Alert Order Share =
+DIVIDE (
+    CALCULATE ( [Medication Orders], fact_medication_order[is_high_alert] = TRUE ),
+    [Medication Orders]
+)
+
+Median Order to Dispense (min) =
+MEDIANX (
+    FILTER ( fact_medication_order, NOT ISBLANK ( fact_medication_order[order_to_dispense_min] ) ),
+    fact_medication_order[order_to_dispense_min]
+)
+
+// -------------------------------------------------------- CLAIMS & BILLING
+Claims Submitted = COUNTROWS ( fact_claim )
+
+Claims Adjudicated =
+CALCULATE ( [Claims Submitted], fact_claim[is_adjudicated] = TRUE )
+
+Claims Approved =
+CALCULATE ( [Claims Submitted], fact_claim[is_approved] = TRUE )
+
+Claim Approval Rate =
+// Denominator is adjudicated claims only. Including pending claims would make
+// the rate fall every time submission volume rises, which is misleading.
+DIVIDE ( [Claims Approved], [Claims Adjudicated] )
+
+Claim Denial Rate =
+DIVIDE ( CALCULATE ( [Claims Submitted], fact_claim[is_denied] = TRUE ), [Claims Adjudicated] )
+
+Billed Amount = SUM ( fact_claim[billed_amount] )
+Approved Amount = SUM ( fact_claim[approved_amount] )
+Denied Amount = SUM ( fact_claim[denied_amount] )
+
+Net Collection Rate = DIVIDE ( SUM ( fact_claim[paid_amount] ), [Approved Amount] )
+
+Average Days to Adjudicate = AVERAGE ( fact_claim[days_to_adjudicate] )
+
+Outstanding AR = SUM ( fact_billing_line[outstanding_amount] )
+
+AR Over 90 Days =
+CALCULATE (
+    [Outstanding AR],
+    FILTER (
+        ALL ( dim_date ),
+        dim_date[calendar_date] < MAX ( dim_date[calendar_date] ) - 90
+    )
+)
+
+// ------------------------------------------------------- SATISFACTION
+Survey Responses = COUNTROWS ( fact_satisfaction_survey )
+
+Average Overall Score = AVERAGE ( fact_satisfaction_survey[overall_score] )
+
+Net Promoter Score =
+VAR Promoters =
+    CALCULATE ( [Survey Responses], fact_satisfaction_survey[nps_category] = "Promoter" )
+VAR Detractors =
+    CALCULATE ( [Survey Responses], fact_satisfaction_survey[nps_category] = "Detractor" )
+RETURN
+    DIVIDE ( Promoters - Detractors, [Survey Responses] ) * 100
+
+Survey Response Rate =
+DIVIDE ( [Survey Responses], [Total Discharges] + [Completed Appointments] )
+
+// -------------------------------------------------------- DATA QUALITY
+DQ Rules Executed = COUNTROWS ( fact_dq_result )
+
+DQ Pass Rate =
+DIVIDE ( SUM ( fact_dq_result[rows_passed] ), SUM ( fact_dq_result[rows_evaluated] ) )
+
+DQ Breaches =
+CALCULATE ( COUNTROWS ( fact_dq_result ), fact_dq_result[is_breach] = TRUE )
+
+Critical DQ Breaches =
+CALCULATE ( [DQ Breaches], dim_dq_rule[severity] = "Error" )
+
+Rows Quarantined = SUM ( fact_dq_result[rows_failed] )
+
+Pipeline Success Rate =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fact_pipeline_run ), fact_pipeline_run[status] = "SUCCESS" ),
+    COUNTROWS ( fact_pipeline_run )
+)
+
+Data Freshness (hours) =
+VAR LastLoad = MAX ( fact_pipeline_run[end_ts] )
+RETURN
+    DATEDIFF ( LastLoad, NOW (), HOUR )

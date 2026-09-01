@@ -1,0 +1,33 @@
+diagnosis_code,diagnosis_description,chapter,category,is_chronic
+I50.0,Congestive heart failure,Circulatory system,Heart failure,1
+I21.9,"Acute myocardial infarction, unspecified",Circulatory system,Ischaemic heart disease,0
+I10,Essential hypertension,Circulatory system,Hypertensive diseases,1
+I48.0,Paroxysmal atrial fibrillation,Circulatory system,Arrhythmia,1
+J44.1,COPD with acute exacerbation,Respiratory system,Chronic lower respiratory,1
+J18.9,"Pneumonia, unspecified organism",Respiratory system,Influenza and pneumonia,0
+J45.9,"Asthma, unspecified",Respiratory system,Chronic lower respiratory,1
+E11.9,Type 2 diabetes mellitus without complications,Endocrine,Diabetes mellitus,1
+E11.2,Type 2 diabetes with kidney complications,Endocrine,Diabetes mellitus,1
+N18.3,"Chronic kidney disease, stage 3",Genitourinary,Renal failure,1
+N39.0,"Urinary tract infection, site unspecified",Genitourinary,Other urinary,0
+K80.2,Calculus of gallbladder without cholecystitis,Digestive system,Gallbladder,0
+K35.8,"Acute appendicitis, unspecified",Digestive system,Appendix,0
+K92.2,"Gastrointestinal haemorrhage, unspecified",Digestive system,Other digestive,0
+M17.1,Unilateral primary osteoarthritis of knee,Musculoskeletal,Arthropathies,1
+M16.1,Unilateral primary osteoarthritis of hip,Musculoskeletal,Arthropathies,1
+S72.0,Fracture of neck of femur,Injury,Fracture of femur,0
+S06.0,Concussion,Injury,Intracranial injury,0
+I63.9,"Cerebral infarction, unspecified",Circulatory system,Cerebrovascular,0
+G40.9,"Epilepsy, unspecified",Nervous system,Episodic disorders,1
+F32.1,"Major depressive disorder, moderate",Mental health,Mood disorders,1
+F20.9,"Schizophrenia, unspecified",Mental health,Psychotic disorders,1
+C50.9,"Malignant neoplasm of breast, unspecified",Neoplasms,Breast cancer,1
+C34.9,Malignant neoplasm of bronchus or lung,Neoplasms,Lung cancer,1
+C18.9,"Malignant neoplasm of colon, unspecified",Neoplasms,Colorectal cancer,1
+O80,Single spontaneous delivery,Pregnancy and childbirth,Delivery,0
+O82,Single delivery by caesarean section,Pregnancy and childbirth,Delivery,0
+A41.9,"Sepsis, unspecified organism",Infectious disease,Sepsis,0
+R07.4,"Chest pain, unspecified",Symptoms and signs,Chest symptoms,0
+R10.4,"Abdominal pain, other and unspecified",Symptoms and signs,Abdominal symptoms,0
+Z51.1,Encounter for antineoplastic chemotherapy,Factors influencing health,Aftercare,0
+U07.1,"COVID-19, virus identified",Infectious disease,Viral infection,0

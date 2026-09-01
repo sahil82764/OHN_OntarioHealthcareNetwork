@@ -1,0 +1,29 @@
+din,generic_name,brand_name,atc_code,atc_class,dosage_form,route,is_controlled_substance,is_high_alert,is_formulary
+02245678,Metformin,Glucophage,A10BA02,Antidiabetics,Tablet,PO,0,0,1
+02123456,Ramipril,Altace,C09AA05,ACE inhibitors,Capsule,PO,0,0,1
+02234567,Atorvastatin,Lipitor,C10AA05,Statins,Tablet,PO,0,0,1
+02345671,Metoprolol,Lopressor,C07AB02,Beta blockers,Tablet,PO,0,0,1
+02456712,Furosemide,Lasix,C03CA01,Loop diuretics,Tablet,PO,0,0,1
+02567123,Warfarin,Coumadin,B01AA03,Anticoagulants,Tablet,PO,0,1,1
+02671234,Apixaban,Eliquis,B01AF02,Anticoagulants,Tablet,PO,0,1,1
+02712345,Heparin,Hepalean,B01AB01,Anticoagulants,Injection,IV,0,1,1
+02812345,Insulin glargine,Lantus,A10AE04,Insulins,Injection,SC,0,1,1
+02912345,Salbutamol,Ventolin,R03AC02,Beta-2 agonists,Inhaler,INH,0,0,1
+03012345,Prednisone,Deltasone,H02AB07,Corticosteroids,Tablet,PO,0,0,1
+03112345,Amoxicillin,Amoxil,J01CA04,Penicillins,Capsule,PO,0,0,1
+03212345,Ceftriaxone,Rocephin,J01DD04,Cephalosporins,Injection,IV,0,0,1
+03312345,Vancomycin,Vancocin,J01XA01,Glycopeptides,Injection,IV,0,1,1
+03412345,Piperacillin-tazobactam,Tazocin,J01CR05,Penicillins,Injection,IV,0,0,1
+03512345,Morphine,Statex,N02AA01,Opioid analgesics,Injection,IV,1,1,1
+03612345,Hydromorphone,Dilaudid,N02AA03,Opioid analgesics,Tablet,PO,1,1,1
+03712345,Acetaminophen,Tylenol,N02BE01,Non-opioid analgesics,Tablet,PO,0,0,1
+03812345,Ibuprofen,Advil,M01AE01,NSAIDs,Tablet,PO,0,0,1
+03912345,Pantoprazole,Pantoloc,A02BC02,Proton pump inhibitors,Tablet,PO,0,0,1
+04012345,Ondansetron,Zofran,A04AA01,Antiemetics,Tablet,PO,0,0,1
+04112345,Sertraline,Zoloft,N06AB06,SSRIs,Tablet,PO,0,0,1
+04212345,Quetiapine,Seroquel,N05AH04,Antipsychotics,Tablet,PO,0,0,1
+04312345,Lorazepam,Ativan,N05BA06,Benzodiazepines,Tablet,PO,1,1,1
+04412345,Levothyroxine,Synthroid,H03AA01,Thyroid hormones,Tablet,PO,0,0,1
+04512345,Potassium chloride,K-Dur,A12BA01,Electrolytes,Injection,IV,0,1,1
+04612345,Cisplatin,Platinol,L01XA01,Antineoplastics,Injection,IV,0,1,1
+04712345,Paclitaxel,Taxol,L01CD01,Antineoplastics,Injection,IV,0,1,1

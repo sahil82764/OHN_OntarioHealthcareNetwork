@@ -1,0 +1,6 @@
+hospital_id,hospital_name,facility_type,region,health_region_code,city,province,licensed_beds,has_emergency_dept,is_teaching_hospital,update_ts
+H001,Lakeshore General Hospital,Acute,Toronto Central,LHIN-C,Toronto,ON,41,1,1,2024-01-01 03:00:00
+H002,Northview Medical Centre,Acute,Toronto North,LHIN-N,North York,ON,30,1,0,2024-01-01 03:00:00
+H003,Riverside Community Hospital,Community,Toronto West,LHIN-W,Etobicoke,ON,18,1,0,2024-01-01 03:00:00
+H004,Highland Rehabilitation Institute,Rehab,Toronto East,LHIN-E,Scarborough,ON,12,0,0,2024-01-01 03:00:00
+H005,Bayview Ambulatory Clinic,Clinic,Toronto Central,LHIN-C,Toronto,ON,0,0,0,2024-01-01 03:00:00

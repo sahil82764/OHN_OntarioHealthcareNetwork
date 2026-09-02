@@ -1,0 +1,50 @@
+department_id,department_name,service_line,hospital_id,cost_centre,is_clinical,is_inpatient_unit,update_ts
+H001-D01,Cardiology,Cardiology,H001,CC7780,1,1,2024-01-01 03:00:00
+H001-D02,General Surgery,General Surgery,H001,CC6569,1,1,2024-01-01 03:00:00
+H001-D03,Internal Medicine,Internal Medicine,H001,CC1960,1,1,2024-01-01 03:00:00
+H001-D04,Orthopaedics,Orthopaedics,H001,CC8729,1,1,2024-01-01 03:00:00
+H001-D05,Obstetrics,Obstetrics,H001,CC4614,1,1,2024-01-01 03:00:00
+H001-D06,Paediatrics,Paediatrics,H001,CC2711,1,1,2024-01-01 03:00:00
+H001-D07,Oncology,Oncology,H001,CC7248,1,1,2024-01-01 03:00:00
+H001-D08,Neurology,Neurology,H001,CC2107,1,1,2024-01-01 03:00:00
+H001-D09,Respirology,Respirology,H001,CC5054,1,1,2024-01-01 03:00:00
+H001-D10,Rehabilitation,Rehabilitation,H001,CC5983,1,1,2024-01-01 03:00:00
+H001-D11,Emergency,Emergency,H001,CC1372,1,0,2024-01-01 03:00:00
+H001-D12,Laboratory,Diagnostics,H001,CC5256,0,0,2024-01-01 03:00:00
+H001-D13,Pharmacy,Support,H001,CC1121,0,0,2024-01-01 03:00:00
+H001-D14,Radiology,Diagnostics,H001,CC8398,0,0,2024-01-01 03:00:00
+H002-D01,Cardiology,Cardiology,H002,CC9736,1,1,2024-01-01 03:00:00
+H002-D02,General Surgery,General Surgery,H002,CC8037,1,1,2024-01-01 03:00:00
+H002-D03,Internal Medicine,Internal Medicine,H002,CC3688,1,1,2024-01-01 03:00:00
+H002-D04,Orthopaedics,Orthopaedics,H002,CC2556,1,1,2024-01-01 03:00:00
+H002-D05,Obstetrics,Obstetrics,H002,CC9432,1,1,2024-01-01 03:00:00
+H002-D06,Paediatrics,Paediatrics,H002,CC2632,1,1,2024-01-01 03:00:00
+H002-D07,Oncology,Oncology,H002,CC1333,1,1,2024-01-01 03:00:00
+H002-D08,Neurology,Neurology,H002,CC5667,1,1,2024-01-01 03:00:00
+H002-D09,Respirology,Respirology,H002,CC2566,1,1,2024-01-01 03:00:00
+H002-D10,Rehabilitation,Rehabilitation,H002,CC7403,1,1,2024-01-01 03:00:00
+H002-D11,Emergency,Emergency,H002,CC3336,1,0,2024-01-01 03:00:00
+H002-D12,Laboratory,Diagnostics,H002,CC5881,0,0,2024-01-01 03:00:00
+H002-D13,Pharmacy,Support,H002,CC3303,0,0,2024-01-01 03:00:00
+H002-D14,Radiology,Diagnostics,H002,CC3385,0,0,2024-01-01 03:00:00
+H003-D01,Cardiology,Cardiology,H003,CC8689,1,1,2024-01-01 03:00:00
+H003-D02,General Surgery,General Surgery,H003,CC8459,1,1,2024-01-01 03:00:00
+H003-D03,Internal Medicine,Internal Medicine,H003,CC5476,1,1,2024-01-01 03:00:00
+H003-D04,Orthopaedics,Orthopaedics,H003,CC1250,1,1,2024-01-01 03:00:00
+H003-D05,Obstetrics,Obstetrics,H003,CC3368,1,1,2024-01-01 03:00:00
+H003-D06,Paediatrics,Paediatrics,H003,CC9610,1,1,2024-01-01 03:00:00
+H003-D07,Oncology,Oncology,H003,CC6468,1,1,2024-01-01 03:00:00
+H003-D08,Neurology,Neurology,H003,CC6096,1,1,2024-01-01 03:00:00
+H003-D09,Respirology,Respirology,H003,CC8330,1,1,2024-01-01 03:00:00
+H003-D10,Rehabilitation,Rehabilitation,H003,CC2904,1,1,2024-01-01 03:00:00
+H003-D11,Emergency,Emergency,H003,CC6230,1,0,2024-01-01 03:00:00
+H003-D12,Laboratory,Diagnostics,H003,CC5564,0,0,2024-01-01 03:00:00
+H003-D13,Pharmacy,Support,H003,CC1264,0,0,2024-01-01 03:00:00
+H003-D14,Radiology,Diagnostics,H003,CC9557,0,0,2024-01-01 03:00:00
+H004-D03,Internal Medicine,Internal Medicine,H004,CC5084,1,1,2024-01-01 03:00:00
+H004-D10,Rehabilitation,Rehabilitation,H004,CC6530,1,1,2024-01-01 03:00:00
+H004-D12,Laboratory,Diagnostics,H004,CC4050,0,0,2024-01-01 03:00:00
+H004-D13,Pharmacy,Support,H004,CC5839,0,0,2024-01-01 03:00:00
+H005-D12,Laboratory,Diagnostics,H005,CC5181,0,0,2024-01-01 03:00:00
+H005-D13,Pharmacy,Support,H005,CC4336,0,0,2024-01-01 03:00:00
+H005-D14,Radiology,Diagnostics,H005,CC4774,0,0,2024-01-01 03:00:00

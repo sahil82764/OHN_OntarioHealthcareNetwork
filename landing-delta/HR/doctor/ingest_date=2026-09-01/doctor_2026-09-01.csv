@@ -1,0 +1,241 @@
+doctor_id,display_name,first_name,last_name,specialty,sub_specialty,credential,primary_department_id,hospital_id,employment_type,fte,hire_date,is_active,update_ts
+DR00010,Dr. Kenneth Patel,Kenneth,Patel,Internal Medicine,Interventional,MD FRCSC,H002-D03,H002,Staff,1.0,2005-01-31,1,2026-08-10 23:01:03
+DR00020,Dr. Jin Garcia,Jin,Garcia,Oncology,Surgical,MD,H003-D07,H003,Staff,1.0,2011-09-20,0,2026-07-19 20:25:32
+DR00029,Dr. Betty Hernandez,Betty,Hernandez,General Surgery,Interventional,MD FRCPC,H001-D02,H001,Staff,0.8,2018-06-10,1,2026-07-12 09:14:32
+DR00044,Dr. Claire Khan,Claire,Khan,Cardiology,Interventional,MD FRCPC,H003-D07,H003,Staff,0.5,2018-07-01,1,2026-08-08 16:53:30
+DR00052,Dr. Ahmed Ricci,Ahmed,Ricci,Orthopaedics,,MD CCFP,H002-D14,H002,Staff,1.0,2020-11-09,1,2026-08-25 00:47:40
+DR00053,Dr. Sarah Stewart,Sarah,Stewart,Obstetrics,Interventional,MD FRCSC,H003-D13,H003,Resident,0.6,2015-05-17,1,2026-07-13 00:59:00
+DR00056,Dr. Joshua Thompson,Joshua,Thompson,Emergency Medicine,,MD,H002-D06,H002,Staff,0.8,2021-12-23,1,2026-07-04 11:35:51
+DR00057,Dr. Sarah Li,Sarah,Li,Respirology,Surgical,MD,H001-D14,H001,Staff,0.8,2022-10-13,1,2026-08-27 03:50:28
+DR00073,Dr. Jessica Moore,Jessica,Moore,Respirology,Surgical,MD CCFP,H002-D01,H002,Staff,0.6,2017-08-12,1,2026-07-22 01:53:24
+DR00081,Dr. Elizabeth Harris,Elizabeth,Harris,Internal Medicine,Interventional,MD,H004-D13,H004,Staff,1.0,2007-02-03,1,2026-08-18 08:17:05
+DR00095,Dr. George Martin,George,Martin,Paediatrics,Paediatric,MD FRCPC,H002-D06,H002,Resident,0.4,2002-09-23,1,2026-08-20 05:59:30
+DR00099,Dr. Mei Fraser,Mei,Fraser,Oncology,,MD FRCSC,H001-D05,H001,Resident,0.8,2021-07-02,1,2026-07-09 16:54:25
+DR00105,Dr. Yuki Kumar,Yuki,Kumar,Neurology,Paediatric,MD,H003-D08,H003,Resident,0.8,2012-09-28,0,2026-08-17 01:51:41
+DR00114,Dr. Jin Gonzalez,Jin,Gonzalez,Anaesthesiology,Paediatric,MD FRCPC,H001-D10,H001,Resident,0.5,2016-10-30,1,2026-08-24 06:05:31
+DR00121,Dr. Omar Ferreira,Omar,Ferreira,Oncology,Paediatric,MD CCFP,H002-D07,H002,Locum,0.8,2016-05-23,0,2026-08-23 15:09:08
+DR00139,Dr. Mohammed Lewis,Mohammed,Lewis,Oncology,Paediatric,MD FRCSC,H003-D01,H003,Staff,1.0,2004-02-08,1,2026-07-14 03:50:38
+DR00144,Dr. Aisha Patel,Aisha,Patel,General Surgery,Surgical,MD,H002-D09,H002,Staff,1.0,2016-08-31,1,2026-07-10 12:34:38
+DR00148,Dr. Anthony Thomas,Anthony,Thomas,Anaesthesiology,Interventional,MD,H002-D01,H002,Locum,0.6,2009-05-26,1,2026-08-03 15:25:16
+DR00152,Dr. Amanda Carter,Amanda,Carter,Neurology,,MD FRCSC,H002-D12,H002,Staff,1.0,2005-03-30,1,2026-08-16 00:09:17
+DR00155,Dr. Andrew Park,Andrew,Park,Obstetrics,Surgical,MD CCFP,H001-D07,H001,Staff,0.8,2019-01-09,1,2025-10-04 21:08:58
+DR00162,Dr. Aisha Ali,Aisha,Ali,Paediatrics,Interventional,MD,H003-D14,H003,Staff,0.8,2013-11-03,1,2026-07-23 12:21:22
+DR00168,Dr. Michelle Zhang,Michelle,Zhang,Obstetrics,,MD CCFP,H003-D05,H003,Staff,0.8,2004-11-21,1,2026-07-23 10:53:26
+DR00169,Dr. Patricia Hernandez,Patricia,Hernandez,Internal Medicine,Interventional,MD,H003-D02,H003,Staff,1.0,2015-04-12,1,2026-08-04 11:15:44
+DR00189,Dr. Marie Clark,Marie,Clark,Obstetrics,Paediatric,MD,H001-D05,H001,Staff,0.4,2018-03-07,1,2026-07-17 18:18:44
+DR00203,Dr. Nikolai Ferreira,Nikolai,Ferreira,Emergency Medicine,Paediatric,MD CCFP,H001-D06,H001,Staff,0.5,2004-05-17,1,2026-08-20 13:43:39
+DR00209,Dr. Emily Tran,Emily,Tran,Orthopaedics,Surgical,MD FRCPC,H001-D12,H001,Locum,1.0,2019-04-26,1,2026-08-22 15:38:32
+DR00210,Dr. Barbara Davis,Barbara,Davis,Physiatry,Interventional,MD CCFP,H001-D08,H001,Staff,0.6,2016-10-13,1,2026-07-09 04:16:04
+DR00213,Dr. Diego Singh,Diego,Singh,Neurology,Surgical,MD FRCSC,H001-D14,H001,Locum,0.5,2021-09-18,1,2026-07-19 12:05:52
+DR00220,Dr. Sandra Patel,Sandra,Patel,Neurology,,MD FRCPC,H001-D08,H001,Staff,0.5,2017-08-20,1,2026-08-23 18:30:44
+DR00227,Dr. Chiara Tran,Chiara,Tran,General Surgery,,MD FRCSC,H002-D02,H002,Staff,0.5,2009-02-02,1,2026-08-06 05:39:13
+DR00238,Dr. Hiroshi Fraser,Hiroshi,Fraser,Oncology,,MD FRCPC,H001-D01,H001,Staff,0.8,2002-05-14,1,2026-08-01 23:48:17
+DR00001,Dr. Steven MacDonald,Steven,MacDonald,Emergency Medicine,Surgical,MD FRCSC,H003-D07,H003,Staff,1.0,2016-08-21,1,2024-01-01 04:00:00
+DR00002,Dr. Lisa Williams,Lisa,Williams,Paediatrics,Surgical,MD,H002-D06,H002,Staff,0.4,2017-11-23,1,2024-01-01 04:00:00
+DR00003,Dr. Mary Kumar,Mary,Kumar,Emergency Medicine,,MD FRCPC,H002-D08,H002,Staff,1.0,2005-12-14,1,2024-01-01 04:00:00
+DR00004,Dr. Fatima Johnson,Fatima,Johnson,Respirology,,MD,H002-D09,H002,Staff,1.0,2023-05-10,1,2024-01-01 04:00:00
+DR00005,Dr. Nadia Clark,Nadia,Clark,Physiatry,Surgical,MD FRCSC,H001-D07,H001,Staff,0.8,2015-04-28,1,2024-01-01 04:00:00
+DR00006,Dr. Emily Singh,Emily,Singh,Emergency Medicine,Paediatric,MD FRCPC,H003-D06,H003,Staff,1.0,2018-02-14,1,2024-01-01 04:00:00
+DR00007,Dr. Marie Thompson,Marie,Thompson,Obstetrics,,MD FRCPC,H003-D05,H003,Staff,1.0,2019-12-02,1,2024-01-01 04:00:00
+DR00008,Dr. Claire Nelson,Claire,Nelson,Cardiology,Paediatric,MD FRCSC,H002-D01,H002,Staff,0.8,2015-11-30,1,2024-01-01 04:00:00
+DR00009,Dr. David Allen,David,Allen,Respirology,Surgical,MD,H002-D09,H002,Staff,0.4,2005-05-07,1,2024-01-01 04:00:00
+DR00011,Dr. Margaret Williams,Margaret,Williams,Paediatrics,Surgical,MD CCFP,H001-D06,H001,Resident,0.8,2019-06-29,1,2024-01-01 04:00:00
+DR00012,Dr. Ahmed Brown,Ahmed,Brown,Oncology,Paediatric,MD FRCSC,H001-D07,H001,Staff,1.0,2009-05-27,1,2024-01-01 04:00:00
+DR00013,Dr. Yusuf Young,Yusuf,Young,General Surgery,Surgical,MD FRCPC,H003-D02,H003,Locum,1.0,2015-09-15,1,2024-01-01 04:00:00
+DR00014,Dr. Nancy Li,Nancy,Li,Internal Medicine,Interventional,MD FRCSC,H004-D03,H004,Staff,1.0,2003-05-30,1,2024-01-01 04:00:00
+DR00015,Dr. Jin Jackson,Jin,Jackson,General Surgery,Paediatric,MD,H003-D02,H003,Staff,1.0,2022-09-27,1,2024-01-01 04:00:00
+DR00016,Dr. David Li,David,Li,Obstetrics,Surgical,MD CCFP,H003-D05,H003,Staff,1.0,2019-03-03,1,2024-01-01 04:00:00
+DR00017,Dr. Luc Gonzalez,Luc,Gonzalez,Emergency Medicine,,MD CCFP,H003-D06,H003,Resident,0.8,2009-03-27,1,2024-01-01 04:00:00
+DR00018,Dr. Ling Cote,Ling,Cote,Anaesthesiology,Surgical,MD,H002-D10,H002,Staff,0.6,2013-02-04,1,2024-01-01 04:00:00
+DR00019,Dr. Amara Wright,Amara,Wright,Internal Medicine,Paediatric,MD FRCSC,H004-D03,H004,Staff,1.0,2014-01-31,1,2024-01-01 04:00:00
+DR00021,Dr. Richard Kim,Richard,Kim,Oncology,Surgical,MD FRCPC,H002-D07,H002,Staff,0.5,2014-05-02,1,2024-01-01 04:00:00
+DR00022,Dr. Nadia Johnson,Nadia,Johnson,Neurology,,MD CCFP,H003-D08,H003,Resident,0.6,2015-04-22,1,2024-01-01 04:00:00
+DR00023,Dr. Luc Fraser,Luc,Fraser,Neurology,Paediatric,MD CCFP,H002-D08,H002,Staff,1.0,2003-10-01,1,2024-01-01 04:00:00
+DR00024,Dr. Yuki Adams,Yuki,Adams,Emergency Medicine,Paediatric,MD FRCPC,H004-D10,H004,Staff,0.8,2012-09-11,1,2024-01-01 04:00:00
+DR00025,Dr. Brian Wright,Brian,Wright,Physiatry,Interventional,MD FRCPC,H003-D03,H003,Staff,1.0,2007-07-16,1,2024-01-01 04:00:00
+DR00026,Dr. Margaret Santos,Margaret,Santos,Cardiology,Interventional,MD FRCPC,H002-D01,H002,Staff,0.5,2002-12-13,1,2024-01-01 04:00:00
+DR00027,Dr. Ingrid Nelson,Ingrid,Nelson,Cardiology,Paediatric,MD FRCSC,H003-D01,H003,Resident,1.0,2022-10-30,1,2024-01-01 04:00:00
+DR00028,Dr. Ashley Williams,Ashley,Williams,Anaesthesiology,Surgical,MD FRCSC,H001-D05,H001,Locum,0.8,2019-10-25,1,2024-01-01 04:00:00
+DR00030,Dr. Chen Hill,Chen,Hill,Internal Medicine,Interventional,MD FRCSC,H002-D03,H002,Staff,0.8,2003-05-18,1,2024-01-01 04:00:00
+DR00031,Dr. Linda Kelly,Linda,Kelly,Cardiology,Paediatric,MD,H001-D01,H001,Resident,0.8,2003-07-28,1,2024-01-01 04:00:00
+DR00032,Dr. David Nelson,David,Nelson,Respirology,,MD FRCPC,H001-D09,H001,Staff,1.0,2017-07-05,1,2024-01-01 04:00:00
+DR00033,Dr. Linda Fraser,Linda,Fraser,Internal Medicine,Paediatric,MD FRCPC,H002-D03,H002,Staff,0.5,2007-10-12,1,2024-01-01 04:00:00
+DR00034,Dr. Anthony Harris,Anthony,Harris,Oncology,Interventional,MD CCFP,H002-D07,H002,Resident,1.0,2015-02-26,1,2024-01-01 04:00:00
+DR00035,Dr. Amanda Miller,Amanda,Miller,Emergency Medicine,Interventional,MD CCFP,H002-D09,H002,Resident,0.6,2003-02-06,1,2024-01-01 04:00:00
+DR00036,Dr. Luc Patel,Luc,Patel,Obstetrics,Interventional,MD,H001-D05,H001,Staff,0.4,2009-05-12,1,2024-01-01 04:00:00
+DR00037,Dr. Omar Brown,Omar,Brown,General Surgery,Surgical,MD FRCPC,H001-D02,H001,Staff,1.0,2018-08-12,1,2024-01-01 04:00:00
+DR00038,Dr. Sofia Osei,Sofia,Osei,Internal Medicine,Paediatric,MD FRCSC,H004-D03,H004,Staff,1.0,2011-03-12,1,2024-01-01 04:00:00
+DR00039,Dr. Pedro Miller,Pedro,Miller,Orthopaedics,Paediatric,MD CCFP,H002-D04,H002,Staff,1.0,2017-08-29,1,2024-01-01 04:00:00
+DR00040,Dr. Thomas Gonzalez,Thomas,Gonzalez,Respirology,Surgical,MD FRCPC,H003-D09,H003,Staff,1.0,2007-08-04,1,2024-01-01 04:00:00
+DR00041,Dr. Ahmed Lewis,Ahmed,Lewis,Obstetrics,Paediatric,MD FRCSC,H001-D05,H001,Staff,0.8,2021-09-22,1,2024-01-01 04:00:00
+DR00042,Dr. George Tran,George,Tran,Anaesthesiology,Interventional,MD FRCPC,H001-D05,H001,Staff,0.8,2018-10-15,1,2024-01-01 04:00:00
+DR00043,Dr. Aisha Thompson,Aisha,Thompson,Emergency Medicine,,MD,H002-D09,H002,Staff,0.6,2009-07-04,1,2024-01-01 04:00:00
+DR00045,Dr. David Mitchell,David,Mitchell,Cardiology,,MD FRCPC,H003-D01,H003,Locum,0.6,2021-04-18,1,2024-01-01 04:00:00
+DR00046,Dr. Jennifer Kumar,Jennifer,Kumar,Cardiology,Surgical,MD,H002-D01,H002,Staff,0.6,2004-04-22,1,2024-01-01 04:00:00
+DR00047,Dr. Sarah Mitchell,Sarah,Mitchell,Neurology,,MD CCFP,H002-D08,H002,Locum,0.6,2022-03-22,1,2024-01-01 04:00:00
+DR00048,Dr. Sofia Rodriguez,Sofia,Rodriguez,Paediatrics,Paediatric,MD,H002-D06,H002,Staff,1.0,2008-04-17,1,2024-01-01 04:00:00
+DR00049,Dr. Linda Brown,Linda,Brown,Neurology,Paediatric,MD,H003-D08,H003,Resident,1.0,2021-02-21,1,2024-01-01 04:00:00
+DR00050,Dr. William Ali,William,Ali,Neurology,,MD FRCPC,H001-D08,H001,Staff,1.0,2016-09-05,1,2024-01-01 04:00:00
+DR00051,Dr. Sarah Williams,Sarah,Williams,Obstetrics,Interventional,MD FRCPC,H003-D05,H003,Staff,0.8,2017-09-30,1,2024-01-01 04:00:00
+DR00054,Dr. Lisa Wang,Lisa,Wang,Anaesthesiology,Interventional,MD FRCSC,H003-D07,H003,Staff,1.0,2006-04-15,1,2024-01-01 04:00:00
+DR00055,Dr. Yusuf Robinson,Yusuf,Robinson,Anaesthesiology,,MD CCFP,H003-D09,H003,Resident,0.5,2011-08-01,1,2024-01-01 04:00:00
+DR00058,Dr. Amara MacDonald,Amara,MacDonald,Emergency Medicine,,MD FRCPC,H002-D08,H002,Staff,0.6,2020-05-02,1,2024-01-01 04:00:00
+DR00059,Dr. Mary Garcia,Mary,Garcia,Physiatry,Paediatric,MD CCFP,H003-D11,H003,Staff,1.0,2004-05-15,1,2024-01-01 04:00:00
+DR00060,Dr. Betty Young,Betty,Young,Emergency Medicine,,MD FRCSC,H003-D08,H003,Resident,0.8,2020-09-11,1,2024-01-01 04:00:00
+DR00061,Dr. Amanda Tran,Amanda,Tran,Anaesthesiology,Paediatric,MD,H003-D03,H003,Staff,0.5,2003-07-06,1,2024-01-01 04:00:00
+DR00062,Dr. Steven Mitchell,Steven,Mitchell,Respirology,,MD FRCSC,H003-D09,H003,Staff,1.0,2011-11-20,1,2024-01-01 04:00:00
+DR00063,Dr. Melissa Green,Melissa,Green,Orthopaedics,Surgical,MD FRCPC,H003-D04,H003,Staff,0.8,2004-11-09,1,2024-01-01 04:00:00
+DR00064,Dr. Aisha O'Brien,Aisha,O'Brien,Paediatrics,Surgical,MD CCFP,H003-D06,H003,Staff,1.0,2018-09-08,1,2024-01-01 04:00:00
+DR00065,Dr. Emily Scott,Emily,Scott,Physiatry,,MD FRCPC,H003-D08,H003,Staff,0.8,2006-03-10,1,2024-01-01 04:00:00
+DR00066,Dr. Priya O'Brien,Priya,O'Brien,Physiatry,,MD,H001-D07,H001,Staff,0.8,2005-10-13,1,2024-01-01 04:00:00
+DR00067,Dr. Barbara Martin,Barbara,Martin,Obstetrics,Interventional,MD FRCSC,H003-D05,H003,Staff,0.5,2013-05-03,1,2024-01-01 04:00:00
+DR00068,Dr. Nadia Hill,Nadia,Hill,Respirology,Paediatric,MD,H001-D09,H001,Staff,0.8,2004-11-29,1,2024-01-01 04:00:00
+DR00069,Dr. Karen Tran,Karen,Tran,Orthopaedics,Interventional,MD,H003-D04,H003,Staff,0.8,2004-12-15,1,2024-01-01 04:00:00
+DR00070,Dr. Amanda Gagnon,Amanda,Gagnon,Internal Medicine,Interventional,MD FRCSC,H004-D03,H004,Staff,1.0,2006-11-28,1,2024-01-01 04:00:00
+DR00071,Dr. Patricia MacDonald,Patricia,MacDonald,Paediatrics,Paediatric,MD FRCSC,H002-D06,H002,Locum,0.8,2002-10-23,1,2024-01-01 04:00:00
+DR00072,Dr. Anthony Williams,Anthony,Williams,Neurology,Paediatric,MD,H002-D08,H002,Staff,0.8,2005-10-12,1,2024-01-01 04:00:00
+DR00074,Dr. Marie Hernandez,Marie,Hernandez,Oncology,,MD CCFP,H001-D07,H001,Staff,0.5,2015-10-05,1,2024-01-01 04:00:00
+DR00075,Dr. Patricia Brown,Patricia,Brown,General Surgery,Surgical,MD FRCPC,H001-D02,H001,Staff,1.0,2022-08-16,1,2024-01-01 04:00:00
+DR00076,Dr. Thomas Lee,Thomas,Lee,General Surgery,Interventional,MD,H002-D02,H002,Resident,0.5,2013-10-31,1,2024-01-01 04:00:00
+DR00077,Dr. Kevin Moore,Kevin,Moore,Anaesthesiology,Surgical,MD,H001-D10,H001,Staff,1.0,2022-10-21,1,2024-01-01 04:00:00
+DR00078,Dr. Hiroshi Johnson,Hiroshi,Johnson,Oncology,Surgical,MD CCFP,H001-D07,H001,Staff,0.6,2013-07-07,1,2024-01-01 04:00:00
+DR00079,Dr. Margaret Taylor,Margaret,Taylor,Orthopaedics,,MD CCFP,H001-D04,H001,Resident,0.5,2011-08-11,1,2024-01-01 04:00:00
+DR00080,Dr. Wei White,Wei,White,Internal Medicine,Surgical,MD FRCSC,H001-D03,H001,Staff,1.0,2012-11-26,1,2024-01-01 04:00:00
+DR00082,Dr. Daniel Stewart,Daniel,Stewart,Obstetrics,Interventional,MD FRCPC,H001-D05,H001,Staff,1.0,2010-08-01,1,2024-01-01 04:00:00
+DR00083,Dr. Andrew Martinez,Andrew,Martinez,Obstetrics,,MD FRCPC,H003-D05,H003,Resident,0.8,2010-01-12,1,2024-01-01 04:00:00
+DR00084,Dr. Lisa Carter,Lisa,Carter,Cardiology,,MD FRCPC,H001-D01,H001,Locum,1.0,2013-02-02,1,2024-01-01 04:00:00
+DR00085,Dr. Jessica Hill,Jessica,Hill,Paediatrics,,MD,H001-D06,H001,Staff,0.8,2002-09-28,1,2024-01-01 04:00:00
+DR00086,Dr. Amara Williams,Amara,Williams,Neurology,Surgical,MD CCFP,H001-D08,H001,Locum,1.0,2005-12-16,1,2024-01-01 04:00:00
+DR00087,Dr. Thomas Tremblay,Thomas,Tremblay,Paediatrics,Surgical,MD FRCSC,H003-D06,H003,Staff,1.0,2004-01-12,1,2024-01-01 04:00:00
+DR00088,Dr. Chen Robinson,Chen,Robinson,Orthopaedics,Interventional,MD FRCPC,H001-D04,H001,Staff,1.0,2012-05-19,1,2024-01-01 04:00:00
+DR00089,Dr. Brian Roy,Brian,Roy,General Surgery,Surgical,MD,H002-D02,H002,Staff,0.5,2006-03-23,1,2024-01-01 04:00:00
+DR00090,Dr. Ling Rodriguez,Ling,Rodriguez,Orthopaedics,Surgical,MD FRCPC,H001-D04,H001,Staff,1.0,2017-11-04,1,2024-01-01 04:00:00
+DR00091,Dr. Mary Gonzalez,Mary,Gonzalez,Orthopaedics,,MD,H003-D04,H003,Staff,0.8,2017-05-13,1,2024-01-01 04:00:00
+DR00092,Dr. Mary Osei,Mary,Osei,Physiatry,Paediatric,MD FRCPC,H002-D11,H002,Resident,1.0,2015-07-04,1,2024-01-01 04:00:00
+DR00093,Dr. Aisha Tremblay,Aisha,Tremblay,Cardiology,Surgical,MD FRCSC,H001-D01,H001,Staff,1.0,2006-11-06,1,2024-01-01 04:00:00
+DR00094,Dr. William Hill,William,Hill,General Surgery,Paediatric,MD FRCPC,H001-D02,H001,Resident,0.5,2013-08-13,1,2024-01-01 04:00:00
+DR00096,Dr. Omar Okafor,Omar,Okafor,General Surgery,Interventional,MD FRCSC,H003-D02,H003,Staff,0.5,2022-02-17,1,2024-01-01 04:00:00
+DR00097,Dr. Omar Zhang,Omar,Zhang,Physiatry,,MD CCFP,H003-D09,H003,Resident,0.4,2022-10-04,1,2024-01-01 04:00:00
+DR00098,Dr. Marie Chen,Marie,Chen,Physiatry,Interventional,MD FRCPC,H004-D10,H004,Resident,1.0,2002-04-21,1,2024-01-01 04:00:00
+DR00100,Dr. Mark Li,Mark,Li,Obstetrics,,MD,H001-D05,H001,Staff,1.0,2008-12-19,1,2024-01-01 04:00:00
+DR00101,Dr. Andrew Fraser,Andrew,Fraser,Respirology,Paediatric,MD FRCSC,H002-D09,H002,Staff,1.0,2012-10-20,1,2024-01-01 04:00:00
+DR00102,Dr. Susan Ahmed,Susan,Ahmed,Anaesthesiology,Paediatric,MD,H002-D01,H002,Staff,1.0,2013-01-13,1,2024-01-01 04:00:00
+DR00103,Dr. Zara Ross,Zara,Ross,Internal Medicine,,MD,H001-D03,H001,Staff,1.0,2005-05-01,1,2024-01-01 04:00:00
+DR00104,Dr. Zara Smith,Zara,Smith,Paediatrics,Surgical,MD FRCPC,H001-D06,H001,Staff,1.0,2004-09-10,1,2024-01-01 04:00:00
+DR00106,Dr. Mark Okafor,Mark,Okafor,General Surgery,Paediatric,MD FRCPC,H001-D02,H001,Staff,0.5,2014-05-07,1,2024-01-01 04:00:00
+DR00107,Dr. Chiara Williams,Chiara,Williams,General Surgery,Paediatric,MD,H001-D02,H001,Staff,1.0,2010-12-19,1,2024-01-01 04:00:00
+DR00108,Dr. Chen Scott,Chen,Scott,Paediatrics,Interventional,MD CCFP,H002-D06,H002,Locum,1.0,2015-09-26,1,2024-01-01 04:00:00
+DR00109,Dr. Yuki Campbell,Yuki,Campbell,Obstetrics,,MD,H002-D05,H002,Resident,1.0,2011-04-13,1,2024-01-01 04:00:00
+DR00110,Dr. Ivan Singh,Ivan,Singh,Neurology,Paediatric,MD CCFP,H002-D08,H002,Locum,0.8,2008-10-27,1,2024-01-01 04:00:00
+DR00111,Dr. Zara Smith,Zara,Smith,Neurology,Paediatric,MD FRCPC,H001-D08,H001,Staff,0.8,2002-07-07,1,2024-01-01 04:00:00
+DR00112,Dr. Barbara Silva,Barbara,Silva,Anaesthesiology,Surgical,MD FRCSC,H001-D09,H001,Staff,0.8,2021-06-23,1,2024-01-01 04:00:00
+DR00113,Dr. Betty Anderson,Betty,Anderson,Emergency Medicine,,MD FRCSC,H003-D03,H003,Staff,0.8,2018-09-21,1,2024-01-01 04:00:00
+DR00115,Dr. Nancy Li,Nancy,Li,Internal Medicine,Paediatric,MD,H001-D03,H001,Resident,0.6,2014-06-16,1,2024-01-01 04:00:00
+DR00116,Dr. Diego Lopez,Diego,Lopez,Respirology,,MD,H001-D09,H001,Staff,0.6,2002-12-29,1,2024-01-01 04:00:00
+DR00117,Dr. Jin Jackson,Jin,Jackson,Oncology,Interventional,MD FRCSC,H001-D07,H001,Locum,1.0,2005-04-02,1,2024-01-01 04:00:00
+DR00118,Dr. Jennifer Robinson,Jennifer,Robinson,Respirology,Paediatric,MD,H002-D09,H002,Locum,0.8,2004-06-18,1,2024-01-01 04:00:00
+DR00119,Dr. Mark Lopez,Mark,Lopez,Physiatry,,MD,H001-D05,H001,Staff,0.6,2023-01-04,1,2024-01-01 04:00:00
+DR00120,Dr. Jennifer Osei,Jennifer,Osei,General Surgery,Paediatric,MD FRCPC,H001-D02,H001,Staff,1.0,2012-12-20,1,2024-01-01 04:00:00
+DR00122,Dr. Nadia Rossi,Nadia,Rossi,Cardiology,Surgical,MD FRCPC,H002-D01,H002,Resident,1.0,2008-11-13,1,2024-01-01 04:00:00
+DR00123,Dr. Amara Park,Amara,Park,Oncology,Surgical,MD CCFP,H003-D07,H003,Staff,0.5,2003-03-28,1,2024-01-01 04:00:00
+DR00124,Dr. Hiroshi Li,Hiroshi,Li,General Surgery,,MD FRCPC,H002-D02,H002,Staff,1.0,2013-07-31,1,2024-01-01 04:00:00
+DR00125,Dr. Chiara Mensah,Chiara,Mensah,Orthopaedics,Paediatric,MD CCFP,H003-D04,H003,Locum,1.0,2011-04-04,1,2024-01-01 04:00:00
+DR00126,Dr. Aisha Nowak,Aisha,Nowak,Oncology,Paediatric,MD FRCPC,H001-D07,H001,Staff,0.5,2013-08-02,1,2024-01-01 04:00:00
+DR00127,Dr. Hassan Harris,Hassan,Harris,Paediatrics,,MD,H002-D06,H002,Locum,1.0,2016-04-22,1,2024-01-01 04:00:00
+DR00128,Dr. Brian Okafor,Brian,Okafor,General Surgery,,MD FRCPC,H003-D02,H003,Staff,0.5,2022-02-02,1,2024-01-01 04:00:00
+DR00129,Dr. Andrew Fraser,Andrew,Fraser,Orthopaedics,Interventional,MD CCFP,H003-D04,H003,Staff,1.0,2019-07-14,1,2024-01-01 04:00:00
+DR00130,Dr. Aisha Roy,Aisha,Roy,Emergency Medicine,Surgical,MD FRCPC,H004-D03,H004,Staff,1.0,2006-01-24,1,2024-01-01 04:00:00
+DR00131,Dr. Wei Harris,Wei,Harris,Neurology,Interventional,MD CCFP,H001-D08,H001,Resident,0.8,2006-08-07,1,2024-01-01 04:00:00
+DR00132,Dr. Jennifer Kim,Jennifer,Kim,Obstetrics,Surgical,MD FRCSC,H002-D05,H002,Staff,1.0,2007-07-28,1,2024-01-01 04:00:00
+DR00133,Dr. Ashley Jackson,Ashley,Jackson,Respirology,Paediatric,MD CCFP,H001-D09,H001,Staff,1.0,2012-03-03,1,2024-01-01 04:00:00
+DR00134,Dr. Betty Roy,Betty,Roy,Orthopaedics,Interventional,MD FRCPC,H003-D04,H003,Staff,1.0,2010-05-29,1,2024-01-01 04:00:00
+DR00135,Dr. Susan Kowalski,Susan,Kowalski,Neurology,Surgical,MD FRCSC,H001-D08,H001,Staff,0.8,2020-05-13,1,2024-01-01 04:00:00
+DR00136,Dr. Yuki Silva,Yuki,Silva,Obstetrics,Interventional,MD,H003-D05,H003,Staff,1.0,2007-02-15,1,2024-01-01 04:00:00
+DR00137,Dr. Zara Nelson,Zara,Nelson,General Surgery,Surgical,MD,H003-D02,H003,Locum,0.8,2023-02-21,1,2024-01-01 04:00:00
+DR00138,Dr. Yusuf Thompson,Yusuf,Thompson,Emergency Medicine,Interventional,MD CCFP,H003-D10,H003,Locum,0.6,2006-07-17,1,2024-01-01 04:00:00
+DR00140,Dr. Chiara Wilson,Chiara,Wilson,Anaesthesiology,,MD,H003-D01,H003,Locum,0.6,2011-11-07,1,2024-01-01 04:00:00
+DR00141,Dr. Kenneth Singh,Kenneth,Singh,Emergency Medicine,Paediatric,MD FRCPC,H003-D03,H003,Staff,0.8,2003-04-04,1,2024-01-01 04:00:00
+DR00142,Dr. Anthony Anderson,Anthony,Anderson,Oncology,Paediatric,MD,H002-D07,H002,Locum,1.0,2022-09-03,1,2024-01-01 04:00:00
+DR00143,Dr. Kevin Okafor,Kevin,Okafor,Physiatry,Surgical,MD FRCPC,H004-D03,H004,Staff,0.5,2007-08-11,1,2024-01-01 04:00:00
+DR00145,Dr. Elizabeth King,Elizabeth,King,Internal Medicine,,MD FRCPC,H004-D03,H004,Staff,1.0,2004-06-21,1,2024-01-01 04:00:00
+DR00146,Dr. Yusuf Hassan,Yusuf,Hassan,Oncology,Interventional,MD FRCSC,H001-D07,H001,Resident,1.0,2004-11-22,1,2024-01-01 04:00:00
+DR00147,Dr. Lisa Ferreira,Lisa,Ferreira,Respirology,Paediatric,MD FRCSC,H003-D09,H003,Staff,1.0,2023-01-13,1,2024-01-01 04:00:00
+DR00149,Dr. Joshua Wang,Joshua,Wang,Anaesthesiology,Paediatric,MD FRCPC,H004-D03,H004,Locum,1.0,2004-09-12,1,2024-01-01 04:00:00
+DR00150,Dr. Daniel Smith,Daniel,Smith,Obstetrics,Surgical,MD FRCPC,H003-D05,H003,Staff,1.0,2003-12-17,1,2024-01-01 04:00:00
+DR00151,Dr. Margaret Khan,Margaret,Khan,Internal Medicine,Interventional,MD FRCSC,H002-D03,H002,Resident,1.0,2003-08-19,1,2024-01-01 04:00:00
+DR00153,Dr. Mary Green,Mary,Green,Internal Medicine,Surgical,MD FRCPC,H002-D03,H002,Resident,0.6,2011-02-22,1,2024-01-01 04:00:00
+DR00154,Dr. Wei Tran,Wei,Tran,Oncology,Surgical,MD FRCPC,H002-D07,H002,Staff,0.8,2003-10-17,1,2024-01-01 04:00:00
+DR00156,Dr. Sandra Osei,Sandra,Osei,Cardiology,Interventional,MD FRCSC,H002-D01,H002,Staff,0.8,2009-05-06,1,2024-01-01 04:00:00
+DR00157,Dr. Priya Park,Priya,Park,Obstetrics,Surgical,MD,H003-D05,H003,Staff,1.0,2016-01-13,1,2024-01-01 04:00:00
+DR00158,Dr. Mary King,Mary,King,Respirology,Interventional,MD CCFP,H003-D09,H003,Locum,0.6,2004-08-28,1,2024-01-01 04:00:00
+DR00159,Dr. Linda Anderson,Linda,Anderson,Neurology,Surgical,MD CCFP,H001-D08,H001,Staff,1.0,2021-06-16,1,2024-01-01 04:00:00
+DR00160,Dr. Amir Murphy,Amir,Murphy,General Surgery,Interventional,MD,H003-D02,H003,Staff,1.0,2013-02-04,1,2024-01-01 04:00:00
+DR00161,Dr. Nadia Lopez,Nadia,Lopez,Paediatrics,,MD,H001-D06,H001,Staff,0.5,2017-09-13,1,2024-01-01 04:00:00
+DR00163,Dr. Sarah Lewis,Sarah,Lewis,Paediatrics,,MD FRCPC,H003-D06,H003,Staff,0.5,2015-10-13,1,2024-01-01 04:00:00
+DR00164,Dr. Chiara Clark,Chiara,Clark,Obstetrics,Surgical,MD FRCPC,H001-D05,H001,Staff,0.8,2005-11-11,1,2024-01-01 04:00:00
+DR00165,Dr. Ashley Taylor,Ashley,Taylor,Oncology,Paediatric,MD FRCSC,H003-D07,H003,Resident,0.5,2022-04-28,1,2024-01-01 04:00:00
+DR00166,Dr. Nancy Clark,Nancy,Clark,Emergency Medicine,Surgical,MD CCFP,H001-D07,H001,Resident,1.0,2023-04-19,1,2024-01-01 04:00:00
+DR00167,Dr. Margaret Kumar,Margaret,Kumar,Cardiology,Surgical,MD FRCPC,H003-D01,H003,Staff,0.6,2013-10-22,1,2024-01-01 04:00:00
+DR00170,Dr. Priya Sutherland,Priya,Sutherland,Anaesthesiology,Interventional,MD FRCSC,H003-D07,H003,Staff,0.5,2022-03-17,1,2024-01-01 04:00:00
+DR00171,Dr. Claire Campbell,Claire,Campbell,Orthopaedics,Interventional,MD FRCPC,H001-D04,H001,Staff,0.8,2022-03-22,1,2024-01-01 04:00:00
+DR00172,Dr. Lisa Wright,Lisa,Wright,Respirology,,MD FRCSC,H003-D09,H003,Staff,0.6,2003-11-21,1,2024-01-01 04:00:00
+DR00173,Dr. Mark Green,Mark,Green,Cardiology,,MD,H002-D01,H002,Staff,0.6,2003-07-02,1,2024-01-01 04:00:00
+DR00174,Dr. Claire Smith,Claire,Smith,Neurology,Paediatric,MD FRCSC,H002-D08,H002,Resident,0.6,2007-06-08,1,2024-01-01 04:00:00
+DR00175,Dr. Jin Allen,Jin,Allen,Cardiology,Paediatric,MD,H003-D01,H003,Locum,1.0,2020-11-27,1,2024-01-01 04:00:00
+DR00176,Dr. Chen Kelly,Chen,Kelly,General Surgery,Paediatric,MD FRCPC,H001-D02,H001,Staff,1.0,2003-05-19,1,2024-01-01 04:00:00
+DR00177,Dr. Michael Hernandez,Michael,Hernandez,Obstetrics,Interventional,MD FRCPC,H001-D05,H001,Staff,1.0,2017-12-10,1,2024-01-01 04:00:00
+DR00178,Dr. Jin Jackson,Jin,Jackson,Oncology,Paediatric,MD CCFP,H002-D07,H002,Staff,1.0,2011-01-06,1,2024-01-01 04:00:00
+DR00179,Dr. Daniel Mitchell,Daniel,Mitchell,Emergency Medicine,Surgical,MD,H002-D04,H002,Staff,0.6,2018-08-22,1,2024-01-01 04:00:00
+DR00180,Dr. Betty Walker,Betty,Walker,Paediatrics,Surgical,MD,H002-D06,H002,Locum,1.0,2003-10-06,1,2024-01-01 04:00:00
+DR00181,Dr. Elizabeth Scott,Elizabeth,Scott,Paediatrics,,MD FRCSC,H001-D06,H001,Staff,0.8,2003-01-27,1,2024-01-01 04:00:00
+DR00182,Dr. Kevin Gonzalez,Kevin,Gonzalez,Orthopaedics,Interventional,MD FRCSC,H001-D04,H001,Staff,1.0,2004-02-15,1,2024-01-01 04:00:00
+DR00183,Dr. Linda Robinson,Linda,Robinson,Emergency Medicine,Paediatric,MD CCFP,H001-D08,H001,Staff,1.0,2021-11-01,1,2024-01-01 04:00:00
+DR00184,Dr. Nikolai Ross,Nikolai,Ross,Obstetrics,,MD CCFP,H002-D05,H002,Locum,0.4,2020-02-08,1,2024-01-01 04:00:00
+DR00185,Dr. Priya Lee,Priya,Lee,Physiatry,,MD FRCPC,H003-D03,H003,Locum,1.0,2020-07-25,1,2024-01-01 04:00:00
+DR00186,Dr. Daniel Scott,Daniel,Scott,Anaesthesiology,Interventional,MD CCFP,H001-D01,H001,Staff,0.4,2022-11-20,1,2024-01-01 04:00:00
+DR00187,Dr. Betty Campbell,Betty,Campbell,General Surgery,Interventional,MD,H001-D02,H001,Staff,0.4,2020-09-04,1,2024-01-01 04:00:00
+DR00188,Dr. Patricia Li,Patricia,Li,Physiatry,Interventional,MD FRCSC,H002-D06,H002,Staff,1.0,2006-07-23,1,2024-01-01 04:00:00
+DR00190,Dr. Raj Moore,Raj,Moore,Anaesthesiology,Interventional,MD CCFP,H003-D02,H003,Locum,0.5,2019-05-14,1,2024-01-01 04:00:00
+DR00191,Dr. Zara Hassan,Zara,Hassan,Orthopaedics,Surgical,MD FRCPC,H003-D04,H003,Staff,1.0,2010-06-16,1,2024-01-01 04:00:00
+DR00192,Dr. Linda Santos,Linda,Santos,Anaesthesiology,Surgical,MD,H003-D06,H003,Staff,0.8,2004-06-25,1,2024-01-01 04:00:00
+DR00193,Dr. Fatima Miller,Fatima,Miller,Internal Medicine,Paediatric,MD,H001-D03,H001,Staff,0.4,2008-12-03,1,2024-01-01 04:00:00
+DR00194,Dr. Amanda Wang,Amanda,Wang,Respirology,,MD FRCSC,H002-D09,H002,Locum,0.5,2010-09-26,1,2024-01-01 04:00:00
+DR00195,Dr. Robert Thompson,Robert,Thompson,Obstetrics,Interventional,MD CCFP,H001-D05,H001,Staff,0.6,2007-03-28,1,2024-01-01 04:00:00
+DR00196,Dr. Sandra Anderson,Sandra,Anderson,Neurology,Surgical,MD FRCPC,H001-D08,H001,Resident,0.8,2012-12-19,1,2024-01-01 04:00:00
+DR00197,Dr. Patricia Tremblay,Patricia,Tremblay,Respirology,,MD FRCPC,H002-D09,H002,Staff,1.0,2012-07-22,1,2024-01-01 04:00:00
+DR00198,Dr. Kenneth Kelly,Kenneth,Kelly,Physiatry,Paediatric,MD FRCPC,H001-D09,H001,Staff,1.0,2021-03-21,1,2024-01-01 04:00:00
+DR00199,Dr. Aisha Brown,Aisha,Brown,Cardiology,Interventional,MD FRCSC,H002-D01,H002,Staff,0.8,2017-09-20,1,2024-01-01 04:00:00
+DR00200,Dr. Raj Murphy,Raj,Murphy,Orthopaedics,Paediatric,MD CCFP,H002-D04,H002,Locum,1.0,2019-02-03,1,2024-01-01 04:00:00
+DR00201,Dr. Robert Gagnon,Robert,Gagnon,Neurology,,MD FRCSC,H002-D08,H002,Staff,0.6,2005-07-24,1,2024-01-01 04:00:00
+DR00202,Dr. Jean Harris,Jean,Harris,Obstetrics,,MD FRCSC,H001-D05,H001,Staff,1.0,2021-10-10,1,2024-01-01 04:00:00
+DR00204,Dr. Priya Rossi,Priya,Rossi,Internal Medicine,Interventional,MD,H004-D03,H004,Staff,1.0,2010-12-31,1,2024-01-01 04:00:00
+DR00205,Dr. Fatima Thompson,Fatima,Thompson,General Surgery,Paediatric,MD FRCSC,H002-D02,H002,Staff,1.0,2010-12-13,1,2024-01-01 04:00:00
+DR00206,Dr. Sarah Ricci,Sarah,Ricci,Neurology,Paediatric,MD CCFP,H003-D08,H003,Staff,1.0,2013-06-14,1,2024-01-01 04:00:00
+DR00207,Dr. Sarah Wilson,Sarah,Wilson,Orthopaedics,Surgical,MD FRCSC,H002-D04,H002,Staff,1.0,2021-10-26,1,2024-01-01 04:00:00
+DR00208,Dr. Sofia Nowak,Sofia,Nowak,Orthopaedics,Paediatric,MD FRCSC,H002-D04,H002,Staff,0.5,2003-11-30,1,2024-01-01 04:00:00
+DR00211,Dr. Jean Baker,Jean,Baker,Neurology,Interventional,MD FRCSC,H001-D08,H001,Resident,0.5,2019-12-11,1,2024-01-01 04:00:00
+DR00212,Dr. Michael Wang,Michael,Wang,Cardiology,Interventional,MD FRCPC,H002-D01,H002,Staff,0.6,2012-06-29,1,2024-01-01 04:00:00
+DR00214,Dr. Nancy Kumar,Nancy,Kumar,Anaesthesiology,,MD,H003-D04,H003,Staff,1.0,2011-01-17,1,2024-01-01 04:00:00
+DR00215,Dr. Luc Okafor,Luc,Okafor,Orthopaedics,Interventional,MD FRCSC,H001-D04,H001,Staff,1.0,2007-03-25,1,2024-01-01 04:00:00
+DR00216,Dr. Daniel Gagnon,Daniel,Gagnon,Respirology,Paediatric,MD FRCSC,H003-D09,H003,Locum,1.0,2020-08-24,1,2024-01-01 04:00:00
+DR00217,Dr. Jean Roy,Jean,Roy,Cardiology,Paediatric,MD,H002-D01,H002,Resident,1.0,2018-06-01,1,2024-01-01 04:00:00
+DR00218,Dr. Sandra Clark,Sandra,Clark,Anaesthesiology,Surgical,MD FRCPC,H001-D05,H001,Staff,0.5,2022-08-05,1,2024-01-01 04:00:00
+DR00219,Dr. Robert Johnson,Robert,Johnson,Anaesthesiology,Paediatric,MD,H001-D06,H001,Staff,0.8,2014-06-22,1,2024-01-01 04:00:00
+DR00221,Dr. Sofia Park,Sofia,Park,Cardiology,Surgical,MD CCFP,H002-D01,H002,Staff,1.0,2013-06-19,1,2024-01-01 04:00:00
+DR00222,Dr. Steven Roy,Steven,Roy,Orthopaedics,,MD FRCPC,H001-D04,H001,Resident,0.8,2007-10-18,1,2024-01-01 04:00:00
+DR00223,Dr. Brian Khan,Brian,Khan,General Surgery,Surgical,MD FRCSC,H002-D02,H002,Staff,1.0,2022-02-17,1,2024-01-01 04:00:00
+DR00224,Dr. Tomas Kowalski,Tomas,Kowalski,Physiatry,Paediatric,MD CCFP,H001-D05,H001,Staff,0.8,2018-02-14,1,2024-01-01 04:00:00
+DR00225,Dr. Hiroshi Nguyen,Hiroshi,Nguyen,General Surgery,,MD,H003-D02,H003,Staff,0.8,2006-12-28,1,2024-01-01 04:00:00
+DR00226,Dr. Nancy Park,Nancy,Park,Cardiology,Surgical,MD FRCSC,H003-D01,H003,Staff,0.8,2021-03-21,1,2024-01-01 04:00:00
+DR00228,Dr. Jessica Lopez,Jessica,Lopez,Internal Medicine,,MD,H002-D03,H002,Staff,0.5,2011-10-04,1,2024-01-01 04:00:00
+DR00229,Dr. Linda MacDonald,Linda,MacDonald,Paediatrics,Paediatric,MD,H002-D06,H002,Staff,1.0,2008-01-22,1,2024-01-01 04:00:00
+DR00230,Dr. Nancy Tran,Nancy,Tran,Cardiology,Interventional,MD CCFP,H003-D01,H003,Staff,0.6,2013-08-20,1,2024-01-01 04:00:00
+DR00231,Dr. Hassan King,Hassan,King,Oncology,Surgical,MD FRCPC,H001-D07,H001,Staff,1.0,2021-03-11,1,2024-01-01 04:00:00
+DR00232,Dr. Amara Thompson,Amara,Thompson,General Surgery,Paediatric,MD,H003-D02,H003,Staff,0.8,2007-04-19,1,2024-01-01 04:00:00
+DR00233,Dr. Hiroshi Ricci,Hiroshi,Ricci,Oncology,Paediatric,MD CCFP,H001-D07,H001,Staff,0.6,2017-07-12,1,2024-01-01 04:00:00
+DR00234,Dr. Amara Zhang,Amara,Zhang,Neurology,Interventional,MD FRCPC,H003-D08,H003,Staff,1.0,2018-02-12,1,2024-01-01 04:00:00
+DR00235,Dr. David Li,David,Li,Internal Medicine,Surgical,MD FRCSC,H002-D03,H002,Staff,1.0,2021-02-24,1,2024-01-01 04:00:00
+DR00236,Dr. Matthew Santos,Matthew,Santos,Paediatrics,Surgical,MD CCFP,H002-D06,H002,Staff,1.0,2013-03-27,1,2024-01-01 04:00:00
+DR00237,Dr. Nancy Rossi,Nancy,Rossi,General Surgery,Surgical,MD FRCSC,H001-D02,H001,Staff,1.0,2005-11-04,1,2024-01-01 04:00:00
+DR00239,Dr. Ingrid Johnson,Ingrid,Johnson,General Surgery,Surgical,MD CCFP,H003-D02,H003,Staff,1.0,2014-05-12,1,2024-01-01 04:00:00
+DR00240,Dr. Patricia Singh,Patricia,Singh,Internal Medicine,Surgical,MD,H003-D03,H003,Staff,0.5,2012-03-20,1,2024-01-01 04:00:00
